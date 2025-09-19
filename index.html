@@ -3,218 +3,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Prairie Smithville - Agricultural Excellence</title>
-    <meta name="description" content="The Prairie Smithville - Your trusted partner in agricultural excellence and rural community development">
-    <link rel="stylesheet" href="styles.css">
+    <title>The Prairie Smithville - Where Families Flourish | New Homes in Smithville, Texas</title>
+    <meta name="description" content="Discover your dream home at The Prairie Smithville. New construction homes in Smithville, Texas featuring modern amenities and family-friendly communities.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>The Prairie Smithville</h2>
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-foreground">The Prairie Smithville</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#homes" class="text-muted-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Homes</a>
+                        <a href="#amenities" class="text-muted-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Amenities</a>
+                        <a href="#location" class="text-muted-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Location</a>
+                        <a href="#contact" class="text-muted-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-primary text-primary-foreground px-6 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-border">
+                <a href="#home" class="text-foreground block px-3 py-2 text-base font-medium">Home</a>
+                <a href="#homes" class="text-muted-foreground hover:text-primary block px-3 py-2 text-base font-medium">Homes</a>
+                <a href="#amenities" class="text-muted-foreground hover:text-primary block px-3 py-2 text-base font-medium">Amenities</a>
+                <a href="#location" class="text-muted-foreground hover:text-primary block px-3 py-2 text-base font-medium">Location</a>
+                <a href="#contact" class="text-muted-foreground hover:text-primary block px-3 py-2 text-base font-medium">Contact</a>
+                <div class="px-3 py-2">
+                    <a href="#contact" class="bg-primary text-primary-foreground block w-full text-center px-6 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors">
+                        Get Started
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Welcome to The Prairie Smithville</h1>
-                <p class="hero-subtitle">Where agricultural excellence meets community tradition</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Our Services</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-blue-50">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Where Families Flourish
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+                    Discover your dream home at The Prairie Smithville. New construction homes in Smithville, Texas featuring modern amenities and family-friendly communities.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#homes" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors">
+                        View Homes
+                    </a>
+                    <a href="#contact" class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/30 transition-colors border border-white/30">
+                        Schedule Tour
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <span>🌾</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About The Prairie Smithville</h2>
-                    <p>Rooted in tradition, growing toward the future</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Our Story</h3>
-                        <p>For generations, The Prairie Smithville has been a cornerstone of agricultural excellence and community development. We combine time-honored farming practices with modern innovation to serve our community and beyond.</p>
-                        <p>Our commitment extends beyond agriculture - we're dedicated to fostering sustainable practices, supporting local businesses, and building a stronger, more connected community for future generations.</p>
-                    </div>
-                    <div class="about-features">
-                        <div class="feature">
-                            <div class="feature-icon">🌱</div>
-                            <h4>Sustainable Agriculture</h4>
-                            <p>Environmentally conscious farming practices that protect our land for future generations.</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">🤝</div>
-                            <h4>Community Focus</h4>
-                            <p>Building strong relationships within our community and supporting local initiatives.</p>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">⚡</div>
-                            <h4>Innovation</h4>
-                            <p>Embracing modern technology while respecting traditional agricultural wisdom.</p>
-                        </div>
-                    </div>
+            
+            <!-- Hero Image Placeholder -->
+            <div class="absolute inset-0 bg-gradient-to-r from-green-600/30 to-blue-600/30">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-8xl opacity-20">🏡</div>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Services</h2>
-                    <p>Comprehensive agricultural and community solutions</p>
+        <!-- Homes Section -->
+        <section id="homes" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Beautiful New Homes</h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Choose from our carefully designed floor plans, each crafted with modern living in mind and built with quality materials.
+                    </p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🚜</div>
-                        <h3>Agricultural Consulting</h3>
-                        <p>Expert guidance on crop management, soil health, and sustainable farming practices.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Home Card 1 -->
+                    <div class="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                            <div class="text-6xl opacity-50">🏠</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-card-foreground mb-2">The Meadow</h3>
+                            <p class="text-muted-foreground mb-4">3 Bed • 2 Bath • 1,850 sq ft</p>
+                            <p class="text-sm text-muted-foreground mb-4">Perfect for first-time homebuyers with an open concept living space and modern finishes.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-primary">$289,900</span>
+                                <a href="#contact" class="text-primary hover:text-primary/80 font-medium">Learn More →</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🌾</div>
-                        <h3>Crop Production</h3>
-                        <p>High-quality crop production using proven methods and modern technology.</p>
+
+                    <!-- Home Card 2 -->
+                    <div class="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                            <div class="text-6xl opacity-50">🏡</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-card-foreground mb-2">The Grove</h3>
+                            <p class="text-muted-foreground mb-4">4 Bed • 3 Bath • 2,350 sq ft</p>
+                            <p class="text-sm text-muted-foreground mb-4">Ideal for growing families with a spacious master suite and bonus room.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-primary">$349,900</span>
+                                <a href="#contact" class="text-primary hover:text-primary/80 font-medium">Learn More →</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">🐄</div>
-                        <h3>Livestock Management</h3>
-                        <p>Comprehensive livestock care and management services for optimal animal health.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🌍</div>
-                        <h3>Environmental Stewardship</h3>
-                        <p>Conservation practices and environmental protection initiatives.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">📈</div>
-                        <h3>Market Development</h3>
-                        <p>Supporting local farmers and businesses in reaching new markets.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🎓</div>
-                        <h3>Education & Training</h3>
-                        <p>Educational programs and training for sustainable agricultural practices.</p>
+
+                    <!-- Home Card 3 -->
+                    <div class="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="aspect-video bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                            <div class="text-6xl opacity-50">🏘️</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-card-foreground mb-2">The Estate</h3>
+                            <p class="text-muted-foreground mb-4">5 Bed • 4 Bath • 3,200 sq ft</p>
+                            <p class="text-sm text-muted-foreground mb-4">Luxury living with premium finishes, large kitchen, and covered patio.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-primary">$489,900</span>
+                                <a href="#contact" class="text-primary hover:text-primary/80 font-medium">Learn More →</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get in Touch</h2>
-                    <p>We'd love to hear from you and discuss how we can work together</p>
+        <!-- Amenities Section -->
+        <section id="amenities" class="py-20 bg-muted">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Community Amenities</h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Enjoy a lifestyle of convenience and recreation with our thoughtfully planned community features.
+                    </p>
                 </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-details">
-                                <h4>Location</h4>
-                                <p>Smithville, Prairie Region</p>
-                            </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="text-2xl text-primary-foreground">🏊‍♀️</div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-details">
-                                <h4>Phone</h4>
-                                <p>(555) 123-4567</p>
-                            </div>
+                        <h3 class="text-lg font-semibold text-foreground mb-2">Community Pool</h3>
+                        <p class="text-muted-foreground text-sm">Resort-style swimming pool with cabanas and lounge areas.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="text-2xl text-primary-foreground">🌳</div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <p>info@theprairiesmithville.com</p>
+                        <h3 class="text-lg font-semibold text-foreground mb-2">Parks & Trails</h3>
+                        <p class="text-muted-foreground text-sm">Walking trails and playgrounds for family recreation.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="text-2xl text-primary-foreground">🏫</div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-foreground mb-2">Top Schools</h3>
+                        <p class="text-muted-foreground text-sm">Located in the highly-rated Smithville ISD school district.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="text-2xl text-primary-foreground">🛒</div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-foreground mb-2">Shopping & Dining</h3>
+                        <p class="text-muted-foreground text-sm">Convenient access to local shops and restaurants.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-6">Prime Location in Smithville</h2>
+                        <p class="text-lg text-muted-foreground mb-6">
+                            Located in the heart of Smithville, Texas, The Prairie offers the perfect balance of small-town charm and modern convenience. Just minutes from Austin, you'll enjoy easy access to major employers, entertainment, and cultural attractions.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <div class="text-xs text-primary-foreground">✓</div>
+                                </div>
+                                <span class="text-foreground">25 minutes to downtown Austin</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <div class="text-xs text-primary-foreground">✓</div>
+                                </div>
+                                <span class="text-foreground">Close to major employers and tech companies</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <div class="text-xs text-primary-foreground">✓</div>
+                                </div>
+                                <span class="text-foreground">Access to top-rated schools</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <div class="text-xs text-primary-foreground">✓</div>
+                                </div>
+                                <span class="text-foreground">Beautiful natural surroundings</span>
                             </div>
                         </div>
                     </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <div class="bg-muted rounded-xl p-8 text-center">
+                        <div class="text-6xl mb-4">🗺️</div>
+                        <h3 class="text-xl font-semibold text-foreground mb-2">Interactive Map</h3>
+                        <p class="text-muted-foreground mb-4">Explore the neighborhood and see what's nearby</p>
+                        <a href="#contact" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Map <span class="ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-muted">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Make It Home?</h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Contact our sales team to schedule a tour, get pricing information, or learn more about available homes.
+                    </p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-foreground mb-2">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-foreground mb-2">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-foreground mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-foreground mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-foreground mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your dream home..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div class="text-center">
+                            <button type="submit" class="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors">
+                                Send Message
+                            </button>
+                        </div>
                     </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="text-xl text-primary-foreground">📞</div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-foreground mb-2">Call Us</h3>
+                        <p class="text-muted-foreground">(512) 555-0123</p>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="text-xl text-primary-foreground">✉️</div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-foreground mb-2">Email Us</h3>
+                        <p class="text-muted-foreground">info@theprairiesmithville.com</p>
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div class="text-xl text-primary-foreground">📍</div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-foreground mb-2">Visit Us</h3>
+                        <p class="text-muted-foreground">123 Prairie Lane<br>Smithville, TX 78957</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>The Prairie Smithville</h3>
-                    <p>Agricultural excellence and community development since our founding.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Agricultural Consulting</a></li>
-                        <li><a href="#services">Crop Production</a></li>
-                        <li><a href="#services">Livestock Management</a></li>
-                        <li><a href="#services">Environmental Stewardship</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="Twitter">🐦</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="LinkedIn">💼</a>
+    <!-- Footer -->
+    <footer class="bg-foreground text-foreground">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold text-white mb-4">The Prairie Smithville</h3>
+                    <p class="text-white/70 mb-4 max-w-md">
+                        Where families flourish in beautiful new homes in Smithville, Texas. Discover modern living in a community designed for you.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">Facebook</a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">Instagram</a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">Twitter</a>
                     </div>
                 </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#homes" class="text-white/70 hover:text-white transition-colors">Homes</a></li>
+                        <li><a href="#amenities" class="text-white/70 hover:text-white transition-colors">Amenities</a></li>
+                        <li><a href="#location" class="text-white/70 hover:text-white transition-colors">Location</a></li>
+                        <li><a href="#contact" class="text-white/70 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-white/70">
+                        <li>(512) 555-0123</li>
+                        <li>info@theprairiesmithville.com</li>
+                        <li>123 Prairie Lane<br>Smithville, TX 78957</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-bottom">
+            <div class="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
                 <p>&copy; 2024 The Prairie Smithville. All rights reserved.</p>
             </div>
         </div>
