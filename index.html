@@ -172,16 +172,32 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="relative" id="hero">
-            <div class="hero-gradient">
+        <section class="relative overflow-hidden" id="hero">
+            <!-- Video Background -->
+            <div class="absolute inset-0 z-0">
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    poster="images/exterior-front.png">
+                    <source src="images/hero-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
+            </div>
+
+            <div class="relative z-10">
                 <div class="container mx-auto px-4 py-24 sm:px-6 lg:px-8">
                     <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-16">
                         <div class="flex flex-col justify-center space-y-4">
                             <div class="space-y-2">
-                                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                                <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white drop-shadow-lg">
                                     Where Families Flourish
                                 </h1>
-                                <p class="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                                <p class="max-w-[600px] text-white/90 md:text-xl drop-shadow-md">
                                     28 Beautiful New Homes in Smithville, Texas. Premium construction with modern amenities and family-friendly community features.
                                 </p>
                             </div>
@@ -193,40 +209,32 @@
                                     Schedule Tour
                                 </a>
                             </div>
-                            <div class="flex items-center space-x-4 text-sm text-muted-foreground">
+                            <div class="flex items-center space-x-4 text-sm text-white/80">
                                 <div class="flex items-center space-x-1">
-                                    <svg class="h-4 w-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="h-4 w-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
                                     </svg>
                                     <span>Starting at $316,500</span>
                                 </div>
                                 <div class="flex items-center space-x-1">
-                                    <svg class="h-4 w-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="h-4 w-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
                                     </svg>
                                     <span>Smithville, TX</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center justify-center">
-                            <div class="relative">
-                                <div class="hero-image-container relative overflow-hidden rounded-lg shadow-2xl">
-                                    <img src="images/exterior-front.png" alt="The Prairie Homes - Exterior" class="hero-image h-[32rem] w-full object-cover" data-index="0">
-                                    <img src="images/living-room.png" alt="The Prairie Homes - Living Room" class="hero-image absolute inset-0 h-full w-full object-cover opacity-0" data-index="1">
-                                    <img src="images/kitchen-dining.png" alt="The Prairie Homes - Kitchen" class="hero-image absolute inset-0 h-full w-full object-cover opacity-0" data-index="2">
-                                    <img src="images/master-bedroom.png" alt="The Prairie Homes - Master Bedroom" class="hero-image absolute inset-0 h-full w-full object-cover opacity-0" data-index="3">
-                                    <img src="images/exterior-side.png" alt="The Prairie Homes - Side View" class="hero-image absolute inset-0 h-full w-full object-cover opacity-0" data-index="4">
-                                </div>
-                                <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg animate-fadeInUp delay-500">
-                                    <p class="text-sm text-gray-600">New Construction</p>
-                                    <p class="text-2xl font-bold text-gray-900">2024-2025</p>
-                                </div>
-                                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                                    <button class="hero-indicator h-3 w-3 rounded-full bg-white/70 hover:bg-white transition-colors" data-index="0"></button>
-                                    <button class="hero-indicator h-3 w-3 rounded-full bg-white/40 hover:bg-white transition-colors" data-index="1"></button>
-                                    <button class="hero-indicator h-3 w-3 rounded-full bg-white/40 hover:bg-white transition-colors" data-index="2"></button>
-                                    <button class="hero-indicator h-3 w-3 rounded-full bg-white/40 hover:bg-white transition-colors" data-index="3"></button>
-                                    <button class="hero-indicator h-3 w-3 rounded-full bg-white/40 hover:bg-white transition-colors" data-index="4"></button>
+                        <div class="flex items-center justify-center lg:justify-end">
+                            <div class="relative w-full max-w-md lg:max-w-lg">
+                                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-2xl border border-white/20">
+                                    <div class="text-center">
+                                        <p class="text-sm text-white/80 mb-2">New Construction</p>
+                                        <p class="text-3xl font-bold text-white">2024-2025</p>
+                                        <div class="mt-4 pt-4 border-t border-white/20">
+                                            <p class="text-white/80 text-sm">28 Premium Homes</p>
+                                            <p class="text-white font-semibold mt-1">Smithville, Texas</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -239,21 +247,21 @@
         <section class="py-24 lg:py-32" id="about">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl text-center">
-                    <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Welcome to THE PRAIRIE!</h2>
+                    <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Discover The Prairie Subdivision</h2>
                     <p class="mt-4 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                        THE PRAIRIE is designed with your family's comfort in mind. These homes come with comprehensive warranty coverage and premium features.
+                        A thoughtfully designed neighborhood that blends comfort, quality, and small-town charm.
                     </p>
                 </div>
                 <div class="mx-auto mt-16 grid max-w-5xl items-center gap-6 lg:grid-cols-2 lg:gap-12">
                     <div class="space-y-4">
                         <p class="text-gray-500 dark:text-gray-400">
-                            Each of our beautiful, newly constructed houses features fenced-in backyards, providing both privacy and security.
-                            With spacious layouts, open kitchens, and expansive living areas, there's ample room for unforgettable family
-                            gatherings and cherished memories.
+                            These newly constructed homes are built with durability in mind, offering the perfect combination of style and long-term peace of mind. Every home comes with <strong class="text-gray-700">1-2-10-year warranty coverage</strong>, ensuring confidence in your investment for years to come.
                         </p>
                         <p class="text-gray-500 dark:text-gray-400">
-                            The Prairie Subdivision boasts homes designed to evoke pride and timeless charm. As you stroll through our well-lit
-                            streets, enjoy the peace of mind provided by our secluded public entrance.
+                            Each home rests on an <strong class="text-gray-700">engineered slab foundation</strong>, designed to provide strength, stability, and protection against shifting soils common in Central Texas. Combined with modern construction standards, this foundation delivers lasting quality and reduces maintenance concerns down the road.
+                        </p>
+                        <p class="text-gray-500 dark:text-gray-400">
+                            Inside, you will find fenced-in backyards for privacy, spacious open layouts filled with natural light, modern kitchens for cooking and entertaining, and generous living areas made for gatherings or quiet evenings.
                         </p>
                         <div class="grid gap-4 sm:grid-cols-2">
                             <div class="rounded-lg border bg-card p-4 text-card-foreground shadow-sm">
@@ -268,6 +276,14 @@
                     </div>
                     <div class="flex justify-center">
                         <img src="images/living-room.png" alt="Living Room" class="w-full h-96 overflow-hidden rounded-xl object-cover shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    </div>
+                </div>
+                <div class="mx-auto mt-12 max-w-5xl">
+                    <div class="space-y-4 text-center lg:text-left">
+                        <h3 class="text-2xl font-bold text-gray-900">Built with Pride & Community Spirit</h3>
+                        <p class="text-gray-500 dark:text-gray-400">
+                            The Prairie was created with timeless style, strength, and a sense of pride. Residents can enjoy leisurely walks and bike rides along well-lit sidewalks, a secluded entrance, and a welcoming atmosphere that encourages friendly neighborhood connections. This peaceful setting makes it easy to relax outdoors, play, or simply enjoy the community around you.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -589,67 +605,80 @@
                 <div class="mx-auto mt-16 grid max-w-5xl items-center gap-6 lg:grid-cols-2 lg:gap-12">
                     <div class="space-y-4">
                         <p class="text-gray-500 dark:text-gray-400">
-                            The Prairie is located in the charming town of Smithville, TX. Immerse yourself in Smithville's rich history
-                            and small-town charm. Enjoy casual walks in several city-owned local parks, let your furry friends enjoy
-                            prancing in our dedicated dog park, or enjoy quality family time at the nearby recreation center.
+                            Nestled in the heart of Smithville, TX, The Prairie offers close access to everything you need. Immerse yourself in Smithville's rich history and small-town charm while enjoying modern convenience.
                         </p>
                         <div class="grid gap-4 sm:grid-cols-2">
                             <div class="rounded-lg border bg-card p-4 text-card-foreground shadow-sm">
-                                <h3 class="font-semibold">Distance to Austin</h3>
-                                <p class="text-2xl font-bold text-primary">45 min</p>
+                                <h3 class="font-semibold">Airport Distance</h3>
+                                <p class="text-2xl font-bold text-primary">40 min</p>
+                                <p class="text-xs text-muted-foreground mt-1">Austin-Bergstrom Intl.</p>
                             </div>
                             <div class="rounded-lg border bg-card p-4 text-card-foreground shadow-sm">
                                 <h3 class="font-semibold">Population</h3>
                                 <p class="text-2xl font-bold text-primary">4,271</p>
+                                <p class="text-xs text-muted-foreground mt-1">Small-town charm</p>
                             </div>
                         </div>
                         <div class="space-y-3">
-                            <h3 class="text-xl font-semibold">Smithville Highlights</h3>
+                            <h3 class="text-xl font-semibold">Local Highlights</h3>
                             <ul class="space-y-2">
                                 <li class="flex items-start space-x-3">
                                     <svg class="mt-0.5 h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span class="text-muted-foreground">Historic Main Street with shops, restaurants & galleries</span>
+                                    <span class="text-muted-foreground">Colorado River recreation & activities</span>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <svg class="mt-0.5 h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span class="text-muted-foreground">Buescher State Park - 3 miles from town</span>
+                                    <span class="text-muted-foreground">Buescher State Park hiking & camping</span>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <svg class="mt-0.5 h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span class="text-muted-foreground">Colorado River recreation</span>
+                                    <span class="text-muted-foreground">Riverbend Park for family fun</span>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <svg class="mt-0.5 h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span class="text-muted-foreground">Famous "Hope Floats" filming location</span>
+                                    <span class="text-muted-foreground">Community recreation center nearby</span>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <svg class="mt-0.5 h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span class="text-muted-foreground">Annual festivals & community events</span>
+                                    <span class="text-muted-foreground">Historic Main Street & local shops</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <div class="rounded-lg border bg-muted p-8 text-center">
-                            <svg class="mx-auto h-16 w-16 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
-                            <h3 class="mt-4 text-xl font-semibold">325 String Prairie Way</h3>
-                            <p class="text-muted-foreground">Smithville, TX 78957</p>
-                            <a href="https://maps.google.com/?q=325+String+Prairie+Way,+Smithville,+TX+78957" target="_blank" class="mt-4 inline-flex items-center text-primary hover:underline">
-                                View on Google Maps →
-                            </a>
+                        <div class="w-full">
+                            <div class="rounded-lg overflow-hidden shadow-lg border border-gray-200">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6984.742857142857!2d-97.1386703!3d29.9994746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864481b2b28b9623%3A0xa8dfb56f287e125b!2s304%20String%20Pr%20Wy%2C%20Smithville%2C%20TX%2078957!5e0!3m2!1sen!2sus!4v1704920000000!5m2!1sen!2sus"
+                                    width="100%"
+                                    height="400"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    class="w-full">
+                                </iframe>
+                            </div>
+                            <div class="mt-6 text-center">
+                                <h3 class="text-xl font-semibold text-gray-900">304 String Prairie Way</h3>
+                                <p class="text-muted-foreground mt-1">Smithville, TX 78957</p>
+                                <a href="https://www.google.com/maps/place/304+String+Pr+Wy,+Smithville,+TX+78957/@29.9994746,-97.1386703,1746m/data=!3m2!1e3!4b1!4m6!3m5!1s0x864481b2b28b9623:0xa8dfb56f287e125b!8m2!3d29.99947!4d-97.13609!16s%2Fg%2F11wp90mz53?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="mt-3 inline-flex items-center text-primary hover:underline font-medium">
+                                    Open in Google Maps →
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
