@@ -31,7 +31,7 @@
     <meta name="author" content="The Prairie Smithville">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://theprairiesmithville.com">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -234,11 +234,8 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <!-- Logo -->
-                <a class="flex items-center space-x-2" href="/">
-                    <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 12 2-2m0 0 7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11 2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"/>
-                    </svg>
-                    <span class="font-bold text-lg">The Prairie</span>
+                <a class="flex items-center" href="/">
+                    <img src="images/logo.svg" alt="The Prairie Smithville" class="h-10 w-auto">
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -800,6 +797,132 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Distance to Key Locations -->
+                <div class="mx-auto mt-20 max-w-5xl">
+                    <div class="text-center mb-12">
+                        <h3 class="text-2xl font-bold text-gray-900">Nearby Cities & Amenities</h3>
+                        <p class="mt-2 text-gray-500">Conveniently located near everything you need</p>
+                    </div>
+                    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- Austin Airport -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100">
+                                    <svg class="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">Austin Airport</span>
+                            </div>
+                            <span class="text-primary font-semibold">40 min</span>
+                        </div>
+
+                        <!-- Bastrop -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+                                    <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">Bastrop</span>
+                            </div>
+                            <span class="text-primary font-semibold">20 min</span>
+                        </div>
+
+                        <!-- La Grange -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+                                    <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">La Grange</span>
+                            </div>
+                            <span class="text-primary font-semibold">25 min</span>
+                        </div>
+
+                        <!-- Lockhart -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+                                    <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">Lockhart</span>
+                            </div>
+                            <span class="text-primary font-semibold">30 min</span>
+                        </div>
+
+                        <!-- Downtown Austin -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
+                                    <svg class="h-5 w-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">Downtown Austin</span>
+                            </div>
+                            <span class="text-primary font-semibold">50 min</span>
+                        </div>
+
+                        <!-- HEB Grocery -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-red-100">
+                                    <svg class="h-5 w-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">HEB Bastrop</span>
+                            </div>
+                            <span class="text-primary font-semibold">20 min</span>
+                        </div>
+
+                        <!-- Buescher State Park -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+                                    <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">Buescher State Park</span>
+                            </div>
+                            <span class="text-primary font-semibold">15 min</span>
+                        </div>
+
+                        <!-- McKinney Roughs -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
+                                    <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">McKinney Roughs</span>
+                            </div>
+                            <span class="text-primary font-semibold">25 min</span>
+                        </div>
+
+                        <!-- Smithville Schools -->
+                        <div class="flex items-center justify-between p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100">
+                                    <svg class="h-5 w-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">Smithville ISD</span>
+                            </div>
+                            <span class="text-primary font-semibold">5 min</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -908,12 +1031,9 @@
             <div class="grid gap-8 md:grid-cols-3 md:gap-12">
                 <!-- Logo and Description -->
                 <div class="space-y-4">
-                    <div class="flex items-center gap-2">
-                        <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 12 2-2m0 0 7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11 2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"/>
-                        </svg>
-                        <span class="font-bold text-lg">The Prairie</span>
-                    </div>
+                    <a href="/" class="inline-block">
+                        <img src="images/logo.svg" alt="The Prairie Smithville" class="h-16 w-auto">
+                    </a>
                     <p class="text-sm text-muted-foreground">
                         New Construction Family Homes in Smithville, Texas
                     </p>
