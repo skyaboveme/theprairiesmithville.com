@@ -2,6 +2,75 @@
 // Matching the functionality and interactions of prairie-rblr77.manus.space
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Hero Image Rotation
+    const heroImages = document.querySelectorAll('.hero-image');
+    const heroIndicators = document.querySelectorAll('.hero-indicator');
+    let currentImageIndex = 0;
+    let imageRotationInterval;
+
+    function showImage(index) {
+        // Hide all images
+        heroImages.forEach((img, i) => {
+            if (i === index) {
+                img.style.opacity = '1';
+                img.style.zIndex = '10';
+            } else {
+                img.style.opacity = '0';
+                img.style.zIndex = '5';
+            }
+        });
+
+        // Update indicators
+        heroIndicators.forEach((indicator, i) => {
+            if (i === index) {
+                indicator.classList.remove('bg-white/40');
+                indicator.classList.add('bg-white/70');
+            } else {
+                indicator.classList.remove('bg-white/70');
+                indicator.classList.add('bg-white/40');
+            }
+        });
+
+        currentImageIndex = index;
+    }
+
+    function nextImage() {
+        const nextIndex = (currentImageIndex + 1) % heroImages.length;
+        showImage(nextIndex);
+    }
+
+    function startImageRotation() {
+        imageRotationInterval = setInterval(nextImage, 4000); // Change image every 4 seconds
+    }
+
+    function stopImageRotation() {
+        if (imageRotationInterval) {
+            clearInterval(imageRotationInterval);
+        }
+    }
+
+    // Initialize hero image rotation
+    if (heroImages.length > 1) {
+        // Set up indicator click handlers
+        heroIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                stopImageRotation();
+                showImage(index);
+                startImageRotation(); // Restart rotation after manual selection
+            });
+        });
+
+        // Pause rotation on hover
+        const heroContainer = document.querySelector('.hero-image-container');
+        if (heroContainer) {
+            heroContainer.addEventListener('mouseenter', stopImageRotation);
+            heroContainer.addEventListener('mouseleave', startImageRotation);
+        }
+
+        // Start automatic rotation
+        startImageRotation();
+    }
+
     // Mobile Navigation Toggle
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const mobileMenu = document.querySelector('.mobile-menu');
