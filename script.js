@@ -165,47 +165,12 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateNavbar);
     updateNavbar(); // Initial call
     
-    // Contact Form Handling
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = {
-                firstName: formData.get('firstName'),
-                lastName: formData.get('lastName'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                message: formData.get('message')
-            };
-            
-            // Simple validation
-            if (!data.firstName || !data.lastName || !data.email) {
-                showNotification('Please fill in all required fields.', 'error');
-                return;
-            }
-            
-            if (!isValidEmail(data.email)) {
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            // Show loading state
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-            
-            // Simulate form submission (replace with actual API call)
-            setTimeout(() => {
-                showNotification('Thank you for your interest! We\'ll contact you soon.', 'success');
-                this.reset();
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 2000);
-        });
+    // Contact Form Success Message
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        showNotification('Thank you for your interest! We\'ll contact you soon.', 'success');
+        // Clean up URL
+        window.history.replaceState({}, document.title, window.location.pathname);
     }
     
     // Email validation helper
