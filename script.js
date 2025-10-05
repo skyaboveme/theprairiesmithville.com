@@ -275,37 +275,58 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Intersection Observer for Animations
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-fadeInUp');
+                observer.unobserve(entry.target); // Only animate once
             }
         });
     }, observerOptions);
-    
+
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.bg-card, .text-center, .grid > div');
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    const animateElements = document.querySelectorAll('.card-hover, h2, h3, .flex.items-start');
+    animateElements.forEach((el, index) => {
+        // Add staggered delay
+        el.style.animationDelay = `${index * 50}ms`;
         observer.observe(el);
     });
     
     // Parallax effect for hero section
-    const heroSection = document.querySelector('#home');
-    if (heroSection) {
+    const heroSection = document.querySelector('#hero');
+    const heroImageContainer = document.querySelector('.hero-image-container');
+
+    if (heroSection && heroImageContainer) {
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            heroSection.style.transform = `translateY(${rate}px)`;
+            const rate = scrolled * 0.5;
+            heroImageContainer.style.transform = `translateY(${rate}px)`;
         });
     }
+
+    // Gallery image parallax
+    const galleryImages = document.querySelectorAll('.group img');
+    galleryImages.forEach(img => {
+        img.parentElement.addEventListener('mousemove', (e) => {
+            const rect = img.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const percentX = (x - centerX) / centerX;
+            const percentY = (y - centerY) / centerY;
+
+            img.style.transform = `scale(1.1) translate(${percentX * 10}px, ${percentY * 10}px)`;
+        });
+
+        img.parentElement.addEventListener('mouseleave', () => {
+            img.style.transform = 'scale(1)';
+        });
+    });
     
     // Active navigation link highlighting
     const sections = document.querySelectorAll('section[id]');

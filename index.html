@@ -20,7 +20,67 @@
         .hero-gradient { background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%); }
         .hero-image { transition: opacity 1000ms ease-in-out; }
         .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-8px); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+
+        /* Fade in animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .animate-scaleIn {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+        /* Stagger animation delays */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+
+        /* Initial state for animated elements */
+        .animate-fadeInUp,
+        .animate-fadeIn,
+        .animate-scaleIn {
+            opacity: 0;
+        }
+
+        /* Parallax scroll effect */
+        .parallax {
+            transition: transform 0.1s ease-out;
+        }
     </style>
 
     <script>
@@ -151,13 +211,13 @@
                         <div class="flex items-center justify-center">
                             <div class="relative">
                                 <div class="hero-image-container relative overflow-hidden rounded-lg shadow-2xl">
-                                    <img src="images/exterior-front.png" alt="The Prairie Homes - Exterior" class="hero-image h-96 w-full object-cover" data-index="0">
+                                    <img src="images/exterior-front.png" alt="The Prairie Homes - Exterior" class="hero-image h-[32rem] w-full object-cover" data-index="0">
                                     <img src="images/living-room.png" alt="The Prairie Homes - Living Room" class="hero-image absolute inset-0 h-full w-full object-cover opacity-0" data-index="1">
                                     <img src="images/kitchen-dining.png" alt="The Prairie Homes - Kitchen" class="hero-image absolute inset-0 h-full w-full object-cover opacity-0" data-index="2">
                                     <img src="images/master-bedroom.png" alt="The Prairie Homes - Master Bedroom" class="hero-image absolute inset-0 h-full w-full object-cover opacity-0" data-index="3">
                                     <img src="images/exterior-side.png" alt="The Prairie Homes - Side View" class="hero-image absolute inset-0 h-full w-full object-cover opacity-0" data-index="4">
                                 </div>
-                                <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
+                                <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg animate-fadeInUp delay-500">
                                     <p class="text-sm text-gray-600">New Construction</p>
                                     <p class="text-2xl font-bold text-gray-900">2024-2025</p>
                                 </div>
@@ -207,7 +267,7 @@
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <img src="images/living-room.png" alt="Living Room" class="aspect-video overflow-hidden rounded-xl object-cover">
+                        <img src="images/living-room.png" alt="Living Room" class="w-full h-96 overflow-hidden rounded-xl object-cover shadow-xl hover:shadow-2xl transition-shadow duration-300">
                     </div>
                 </div>
             </div>
@@ -225,8 +285,8 @@
                 <div class="mx-auto mt-16 grid max-w-6xl gap-6 lg:grid-cols-2">
                     <!-- Home 1 -->
                     <div class="card-hover rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
-                        <div class="relative">
-                            <img src="images/exterior-side.png" alt="304 String Prairie WAY" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden">
+                            <img src="images/exterior-side.png" alt="304 String Prairie WAY" class="h-80 w-full object-cover transition-transform duration-500 hover:scale-110">
                             <span class="absolute top-4 left-4 rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">
                                 French Country
                             </span>
@@ -260,8 +320,8 @@
 
                     <!-- Home 2 -->
                     <div class="card-hover rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
-                        <div class="relative">
-                            <img src="images/exterior-back.png" alt="307 String Prairie WAY" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden">
+                            <img src="images/exterior-back.png" alt="307 String Prairie WAY" class="h-80 w-full object-cover transition-transform duration-500 hover:scale-110">
                             <span class="absolute top-4 left-4 rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
                                 Modern Prairie
                             </span>
@@ -295,8 +355,8 @@
 
                     <!-- Home 3 -->
                     <div class="card-hover rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
-                        <div class="relative">
-                            <img src="images/community.png" alt="306 String Prairie WAY" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden">
+                            <img src="images/community.png" alt="306 String Prairie WAY" class="h-80 w-full object-cover transition-transform duration-500 hover:scale-110">
                             <span class="absolute top-4 left-4 rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-800">
                                 Contemporary
                             </span>
@@ -330,8 +390,8 @@
 
                     <!-- Home 4 -->
                     <div class="card-hover rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
-                        <div class="relative">
-                            <img src="images/exterior-front.png" alt="325 String Prairie Way" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden">
+                            <img src="images/exterior-front.png" alt="325 String Prairie Way" class="h-80 w-full object-cover transition-transform duration-500 hover:scale-110">
                             <span class="absolute top-4 left-4 rounded-full bg-orange-100 px-3 py-1 text-sm font-medium text-orange-800">
                                 Prairie Style
                             </span>
@@ -460,7 +520,7 @@
                 </div>
                 <div class="mx-auto mt-16 grid max-w-6xl gap-6 lg:grid-cols-3">
                     <div class="group relative overflow-hidden rounded-lg">
-                        <img src="images/kitchen-dining.png" alt="Kitchen and Dining" class="aspect-video w-full object-cover transition-transform group-hover:scale-110">
+                        <img src="images/kitchen-dining.png" alt="Kitchen and Dining" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             <div class="absolute bottom-4 left-4 text-white">
                                 <p class="font-semibold">Modern Kitchen</p>
@@ -469,7 +529,7 @@
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-lg">
-                        <img src="images/living-room.png" alt="Living Room" class="aspect-video w-full object-cover transition-transform group-hover:scale-110">
+                        <img src="images/living-room.png" alt="Living Room" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             <div class="absolute bottom-4 left-4 text-white">
                                 <p class="font-semibold">Spacious Living Room</p>
@@ -478,7 +538,7 @@
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-lg">
-                        <img src="images/master-bedroom.png" alt="Master Bedroom" class="aspect-video w-full object-cover transition-transform group-hover:scale-110">
+                        <img src="images/master-bedroom.png" alt="Master Bedroom" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             <div class="absolute bottom-4 left-4 text-white">
                                 <p class="font-semibold">Master Suite</p>
@@ -487,7 +547,7 @@
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-lg">
-                        <img src="images/bedroom.png" alt="Bedroom" class="aspect-video w-full object-cover transition-transform group-hover:scale-110">
+                        <img src="images/bedroom.png" alt="Bedroom" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             <div class="absolute bottom-4 left-4 text-white">
                                 <p class="font-semibold">Guest Bedroom</p>
@@ -496,7 +556,7 @@
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-lg">
-                        <img src="images/bathroom.png" alt="Bathroom" class="aspect-video w-full object-cover transition-transform group-hover:scale-110">
+                        <img src="images/bathroom.png" alt="Bathroom" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             <div class="absolute bottom-4 left-4 text-white">
                                 <p class="font-semibold">Modern Bathrooms</p>
@@ -505,7 +565,7 @@
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-lg">
-                        <img src="images/exterior-back.png" alt="Backyard" class="aspect-video w-full object-cover transition-transform group-hover:scale-110">
+                        <img src="images/exterior-back.png" alt="Backyard" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                             <div class="absolute bottom-4 left-4 text-white">
                                 <p class="font-semibold">Fenced Backyard</p>
