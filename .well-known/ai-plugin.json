@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "The Prairie Smithville",
+  "name_for_model": "prairie_smithville_homes",
+  "description_for_human": "Find new construction homes in Smithville, Texas. 28 family homes starting at $316,500.",
+  "description_for_model": "Real estate listing service for The Prairie subdivision in Smithville, Texas. Provides information about 28 new construction homes ranging from $316,500 to $379,500, featuring 2-4 bedrooms, 1402-1780 square feet, fenced backyards, modern amenities, and 1-2-10 year warranty. Located in Smithville, TX (78957), 40 minutes from Austin airport. Contact: (512) 921-0751, sfoerster0722@gmail.com",
+  "api": {
+    "type": "openapi",
+    "url": "https://theprairiesmithville.com"
+  },
+  "auth": {
+    "type": "none"
+  },
+  "logo_url": "https://theprairiesmithville.com/images/logo.svg",
+  "contact_email": "sfoerster0722@gmail.com",
+  "legal_info_url": "https://theprairiesmithville.com"
+}

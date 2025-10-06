@@ -29,9 +29,31 @@
 
     <!-- Additional SEO -->
     <meta name="author" content="The Prairie Smithville">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://theprairiesmithville.com">
     <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
+
+    <!-- AI Platform Optimization -->
+    <meta name="abstract" content="The Prairie Smithville offers 28 new construction homes in Smithville, Texas with prices from $316,500 to $379,500. Features include 2-4 bedrooms, 1402-1780 sq ft, fenced backyards, and 1-2-10 year warranty.">
+    <meta name="classification" content="Real Estate, New Homes, Residential Properties">
+    <meta name="category" content="Real Estate">
+    <meta name="coverage" content="Smithville, Texas, United States">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="en-US">
+    <meta name="target" content="home buyers, families, real estate investors">
+
+    <!-- OpenAI GPT Optimization -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:price:amount" content="316500">
+    <meta property="og:price:currency" content="USD">
+
+    <!-- Additional structured data for AI -->
+    <meta name="property:type" content="residential">
+    <meta name="property:status" content="for sale">
+    <meta name="property:location" content="Smithville, TX 78957">
+    <meta name="property:price_range" content="$316,500 - $379,500">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -97,14 +119,124 @@
         "priceCurrency": "USD",
         "lowPrice": "316500",
         "highPrice": "379500",
-        "offerCount": "28"
+        "offerCount": "28",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2024-01-01"
       },
       "numberOfRooms": "2-4",
       "floorSize": {
         "@type": "QuantitativeValue",
         "value": "1402-1780",
         "unitCode": "SQF"
-      }
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Fenced Backyard",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Open Floor Plan",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Modern Appliances",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Warranty Coverage",
+          "value": "1-2-10 Year"
+        }
+      ],
+      "numberOfBathroomsTotal": 2,
+      "numberOfBedrooms": "2-4",
+      "yearBuilt": "2024-2025"
+    }
+    </script>
+
+    <!-- BreadcrumbList for better navigation understanding -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://theprairiesmithville.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "New Homes",
+          "item": "https://theprairiesmithville.com#homes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Smithville TX",
+          "item": "https://theprairiesmithville.com#location"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateBusiness",
+      "name": "The Prairie Smithville",
+      "description": "New construction homes in Smithville, Texas. 28 family homes with modern amenities starting at $316,500.",
+      "url": "https://theprairiesmithville.com",
+      "logo": "https://theprairiesmithville.com/images/logo.svg",
+      "image": "https://theprairiesmithville.com/images/exterior-front.png",
+      "telephone": "+1-512-921-0751",
+      "email": "sfoerster0722@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "304 String Prairie Way",
+        "addressLocality": "Smithville",
+        "addressRegion": "TX",
+        "postalCode": "78957",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "29.99947",
+        "longitude": "-97.13609"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "priceRange": "$316,500 - $379,500",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "29.99947",
+          "longitude": "-97.13609"
+        },
+        "geoRadius": "50000"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61581697657045"
+      ]
     }
     </script>
 
