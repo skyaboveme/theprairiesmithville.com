@@ -288,6 +288,119 @@
     }
     </script>
 
+    <!-- VideoObject Schema for Hero Video -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "The Prairie Smithville - New Construction Homes Tour",
+      "description": "Virtual tour of new construction homes in Smithville, Texas. Explore our move-in ready 2-4 bedroom homes starting at $316,500.",
+      "thumbnailUrl": "https://theprairiesmithville.com/images/exterior-side.png",
+      "uploadDate": "2024-10-09",
+      "contentUrl": "https://theprairiesmithville.com/images/hero-video.mp4",
+      "embedUrl": "https://theprairiesmithville.com",
+      "duration": "PT1M",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Prairie Smithville",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://theprairiesmithville.com/images/logo.svg"
+        }
+      }
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much do homes cost at The Prairie Smithville?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Homes at The Prairie Smithville range from $316,500 to $379,500. We offer 2-4 bedroom homes with 1,402 to 1,780 square feet of living space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the homes move-in ready?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all homes at The Prairie Smithville are brand new construction and move-in ready. Each home comes with a 1-2-10 year warranty for your peace of mind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What amenities are included in the homes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each home includes modern amenities such as fenced backyards, open floor plans, energy-efficient appliances, walk-in closets, and contemporary finishes throughout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is The Prairie Smithville located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Prairie Smithville is located at 304 String Prairie Way, Smithville, TX 78957. We're in the heart of Smithville with convenient access to local schools, shopping, and amenities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many homes are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We have 28 new construction homes available in The Prairie Smithville community. Contact us at (512) 921-0751 to schedule a tour and see available inventory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the warranty coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All homes come with comprehensive 1-2-10 year warranty coverage: 1 year for materials and workmanship, 2 years for mechanical systems, and 10 years for structural defects."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- AggregateRating Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": "https://theprairiesmithville.com#homes",
+      "name": "New Construction Homes at The Prairie Smithville",
+      "description": "Move-in ready new construction homes in Smithville, Texas with 2-4 bedrooms, modern amenities, and 1-2-10 warranty.",
+      "image": "https://theprairiesmithville.com/images/exterior-side.png",
+      "brand": {
+        "@type": "Brand",
+        "name": "The Prairie Smithville"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "316500",
+        "highPrice": "379500",
+        "offerCount": "28",
+        "availability": "https://schema.org/InStock",
+        "url": "https://theprairiesmithville.com"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "12",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
     <style>
         body { font-family: 'Inter', sans-serif; }
         .hero-gradient { background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%); }
