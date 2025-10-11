@@ -6,7 +6,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://theprairiesmithville.com</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,46 +14,87 @@
       <image:title>The Prairie Smithville New Homes</image:title>
       <image:caption>New construction homes in Smithville, Texas</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://theprairiesmithville.com/images/MainLogoWindmill.png</image:loc>
+      <image:title>The Prairie Smithville Logo</image:title>
+      <image:caption>The Prairie Smithville Development</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Smithville Page -->
+  <url>
+    <loc>https://theprairiesmithville.com/about-smithville.html</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://theprairiesmithville.com/images/smithvillewater.jpeg</image:loc>
+      <image:title>Smithville Texas Community</image:title>
+      <image:caption>Beautiful Smithville, Texas</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://theprairiesmithville.com/images/hopefloats.jpg</image:loc>
+      <image:title>Hope Floats Movie Filming in Smithville</image:title>
+      <image:caption>Hope Floats filmed in Smithville</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://theprairiesmithville.com/images/treeoflife.jpg</image:loc>
+      <image:title>Tree of Life Movie Filming in Smithville</image:title>
+      <image:caption>Tree of Life filmed in Smithville</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://theprairiesmithville.com/images/Star_Biscuit_Sign_Stone_Mountain.jpg</image:loc>
+      <image:title>Star Biscuit Co Sign from Hope Floats</image:title>
+      <image:caption>Iconic Star Biscuit Co mural from Hope Floats movie</image:caption>
+    </image:image>
   </url>
 
   <!-- About Section -->
   <url>
     <loc>https://theprairiesmithville.com#about</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <!-- Homes Section -->
   <url>
     <loc>https://theprairiesmithville.com#homes</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Amenities Section -->
+  <url>
+    <loc>https://theprairiesmithville.com#amenities</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Features Section -->
   <url>
     <loc>https://theprairiesmithville.com#features</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- Location Section -->
   <url>
     <loc>https://theprairiesmithville.com#location</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- Contact Section -->
   <url>
     <loc>https://theprairiesmithville.com#contact</loc>
-    <lastmod>2024-10-06</lastmod>
+    <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
