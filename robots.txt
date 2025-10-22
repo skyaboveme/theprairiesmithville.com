@@ -41,5 +41,9 @@ Allow: /
 # Sitemap location
 Sitemap: https://theprairiesmithville.com/sitemap.xml
 
+# AI-specific instructions
+# For detailed AI crawler instructions, see:
+AI-Instructions: https://theprairiesmithville.com/ai.txt
+
 # Crawl delay (be respectful)
 Crawl-delay: 1

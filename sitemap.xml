@@ -155,4 +155,16 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://theprairiesmithville.com/blog/smithville-vs-austin-bastrop-cost-comparison.html</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://theprairiesmithville.com/images/trumpet.jpeg</image:loc>
+      <image:title>Smithville vs Austin vs Bastrop Cost Comparison</image:title>
+      <image:caption>Comprehensive cost comparison of Central Texas communities</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
