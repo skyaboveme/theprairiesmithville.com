@@ -263,6 +263,188 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNK2HNRX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <!-- Open House Modal -->
+    <div id="openHouseModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+        <div class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <!-- Close Button -->
+            <button onclick="closeOpenHouseModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <!-- Modal Content -->
+            <div class="p-8 md:p-10">
+                <!-- Header -->
+                <div class="text-center mb-6">
+                    <div class="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">
+                        Special Event
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                        Open House at The Prairie!
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        Join us and discover your dream home
+                    </p>
+                </div>
+
+                <!-- Date & Time -->
+                <div class="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-6 mb-6 border-l-4 border-green-600">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <div class="text-sm text-gray-600 font-medium">Date</div>
+                                <div class="text-lg font-bold text-gray-900">Saturday, November 8th</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <div>
+                                <div class="text-sm text-gray-600 font-medium">Time</div>
+                                <div class="text-lg font-bold text-gray-900">Starting at 10:00 AM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-6">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Come and experience the warmth and charm of our new, family-friendly housing development. We're excited to welcome you to our community and show you what makes The Prairie and Smithville, Texas, such a special place to live.
+                    </p>
+                </div>
+
+                <!-- Food Section -->
+                <div class="bg-amber-50 rounded-xl p-6 mb-6 border border-amber-200">
+                    <div class="flex items-center gap-2 mb-3">
+                        <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                        <h3 class="font-bold text-gray-900">Complimentary Food & Drinks</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-600">•</span>
+                            Homemade Chili
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-600">•</span>
+                            Frito Pies
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-600">•</span>
+                            Hot Dogs
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-amber-600">•</span>
+                            Desserts and Beverages
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- What to Expect -->
+                <div class="mb-6">
+                    <h3 class="font-bold text-gray-900 mb-3">What to Expect:</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Tour beautifully crafted new homes</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Learn about the vibrant Smithville community</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Meet your future neighbors</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Experience modern living with small-town charm</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center pt-4">
+                    <p class="text-gray-600 mb-4">
+                        Bring your family and friends for a delightful day!
+                    </p>
+                    <a href="https://www.facebook.com/events/725994193118142?acontext=%257B%2522event_action_history%2522%253A%5B%257B%2522surface%2522%253A%2522user_timeline%2522%257D%252C%257B%2522mechanism%2522%253A%2522attachment%2522%252C%2522surface%2522%253A%2522newsfeed%2522%257D%5D%252C%2522ref_notif_type%2522%253Anull%257D" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors shadow-lg hover:shadow-xl">
+                        RSVP on Facebook
+                    </a>
+                    <p class="text-sm text-gray-500 mt-4">
+                        We look forward to seeing you there!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #openHouseModal.show {
+            display: flex !important;
+        }
+
+        @media (max-width: 768px) {
+            #openHouseModal > div {
+                margin: 1rem;
+            }
+        }
+    </style>
+
+    <script>
+        // Open House Modal Functions
+        function showOpenHouseModal() {
+            const modal = document.getElementById('openHouseModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeOpenHouseModal() {
+            const modal = document.getElementById('openHouseModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Show modal on page load
+        window.addEventListener('load', function() {
+            // Show modal after a short delay for better UX
+            setTimeout(showOpenHouseModal, 1000);
+        });
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('openHouseModal');
+            if (event.target === modal) {
+                closeOpenHouseModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeOpenHouseModal();
+            }
+        });
+    </script>
 
     <!-- Header Navigation -->
     <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
