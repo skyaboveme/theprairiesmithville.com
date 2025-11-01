@@ -685,26 +685,13 @@
             if (modal) {
                 modal.classList.remove('show');
                 document.body.style.overflow = '';
-                // Store that user closed the modal (expires in 24 hours)
-                const expiryTime = new Date().getTime() + (24 * 60 * 60 * 1000);
-                localStorage.setItem('openHouseModalClosed', expiryTime);
             }
         }
 
-        // Show modal on page load if not previously closed
+        // Show modal on page load
         window.addEventListener('load', function() {
-            const modalClosed = localStorage.getItem('openHouseModalClosed');
-            const now = new Date().getTime();
-
-            // Check if modal was closed and if the 24-hour period has expired
-            if (!modalClosed || parseInt(modalClosed) < now) {
-                // Remove expired entry
-                if (modalClosed && parseInt(modalClosed) < now) {
-                    localStorage.removeItem('openHouseModalClosed');
-                }
-                // Show modal after a short delay for better UX
-                setTimeout(showOpenHouseModal, 1000);
-            }
+            // Show modal after a short delay for better UX
+            setTimeout(showOpenHouseModal, 1000);
         });
 
         // Close modal when clicking outside
