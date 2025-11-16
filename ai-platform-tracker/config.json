@@ -1,0 +1,81 @@
+{
+  "brand": {
+    "name": "The Prairie Smithville",
+    "aliases": ["Prairie Smithville", "The Prairie at Smithville", "Smithville Texas homes"],
+    "domain": "theprairiesmithville.com",
+    "keywords": [
+      "Smithville real estate",
+      "homes for sale Smithville TX",
+      "The Prairie Smithville",
+      "Smithville Texas development",
+      "new homes Smithville"
+    ],
+    "competitors": [
+      "Bastrop real estate",
+      "Austin suburbs homes",
+      "Taylor TX homes"
+    ]
+  },
+  "platforms": {
+    "chatgpt": {
+      "enabled": true,
+      "apiKey": "OPENAI_API_KEY",
+      "model": "gpt-4",
+      "endpoint": "https://api.openai.com/v1/chat/completions"
+    },
+    "claude": {
+      "enabled": true,
+      "apiKey": "ANTHROPIC_API_KEY",
+      "model": "claude-3-sonnet-20240229",
+      "endpoint": "https://api.anthropic.com/v1/messages"
+    },
+    "gemini": {
+      "enabled": true,
+      "apiKey": "GOOGLE_API_KEY",
+      "model": "gemini-pro",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models"
+    },
+    "perplexity": {
+      "enabled": true,
+      "apiKey": "PERPLEXITY_API_KEY",
+      "model": "pplx-7b-online",
+      "endpoint": "https://api.perplexity.ai/chat/completions"
+    }
+  },
+  "queries": {
+    "brandAwareness": [
+      "What is The Prairie Smithville?",
+      "Tell me about The Prairie development in Smithville Texas",
+      "What are the best new home communities in Smithville TX?"
+    ],
+    "competitorAnalysis": [
+      "Compare new home developments near Austin Texas",
+      "What are the best places to buy a home near Austin in 2025?",
+      "Smithville vs Bastrop vs Taylor Texas for home buyers"
+    ],
+    "localPresence": [
+      "What's happening in Smithville Texas real estate market?",
+      "Best neighborhoods in Smithville Texas",
+      "New construction homes in Bastrop County Texas"
+    ],
+    "contentAccuracy": [
+      "What amenities does The Prairie Smithville offer?",
+      "Home prices at The Prairie Smithville Texas",
+      "Schools near The Prairie Smithville development"
+    ]
+  },
+  "tracking": {
+    "frequency": "weekly",
+    "retentionDays": 365,
+    "alertThresholds": {
+      "sentimentDrop": -0.3,
+      "accuracyBelow": 0.7,
+      "missingMentions": 3
+    }
+  },
+  "reporting": {
+    "format": ["json", "html", "csv"],
+    "emailAlerts": false,
+    "dashboardPort": 3001
+  }
+}
